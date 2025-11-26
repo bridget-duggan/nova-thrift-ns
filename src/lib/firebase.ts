@@ -4,6 +4,8 @@ import { getAnalytics } from "firebase/analytics";
 import { collection, getDocs, addDoc, doc, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
 import { Store } from "../types/store";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 
 // Your web app's Firebase configuration
@@ -21,6 +23,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
 
 // Functions
 export async function getStores(): Promise<Store[]> {
@@ -37,3 +41,4 @@ export async function getStore(id: string): Promise<Store | null> {
 export async function addStore(store: Store) {
   return await addDoc(collection(db, "stores"), store);
 }
+
