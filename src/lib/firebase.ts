@@ -1,8 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { collection, getDocs, addDoc, doc, getDoc } from "firebase/firestore";
+import { db } from "./firebase";
+import { Store } from "../types/store";
+
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -19,3 +21,19 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Functions
+export async function getStores(): Promise<Store[]> {
+  const snapshot = await getDocs(collection(db, "stores"));
+  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Store));
+}
+
+export async function getStore(id: string): Promise<Store | null> {
+  const docRef = doc(db, "stores", id);
+  const snapshot = await getDoc(docRef);
+  return snapshot.exists() ? (snapshot.data() as Store) : null;
+}
+
+export async function addStore(store: Store) {
+  return await addDoc(collection(db, "stores"), store);
+}
