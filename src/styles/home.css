@@ -1,0 +1,64 @@
+.home .map-feature {
+    background-image: linear-gradient(to top, #F8F5F1, #126091);
+    border-top: #126091 3px solid;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.home .map-feature h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.home .map-feature p {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    border: none;
+    background-color: #1E6A63;
+    width: 200px;
+}
+
+a:hover {
+  background-color: #2A8C82;
+}
+
+a:active {
+  transform: translateY(1px);
+}
+
+.home .learn-about-fast-fashion,
+.home .submit-your-location {
+    background-color: #F8F5F1;
+}
+
+.home .map-feature,
+.home .learn-about-fast-fashion,
+.home .submit-your-location {
+    height: 300px;
+}
+
+.home .learn-about-fast-fashion h1,
+.home .submit-your-location h1 {
+    color: #7A6951;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    padding: 30px;
+}
+
+.home .submit-your-location h1 {
+    text-align: right;
+}
