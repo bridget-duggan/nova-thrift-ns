@@ -7,6 +7,15 @@ interface Props {
   stores: Store[];
 }
 
+interface StoreMapProps {
+  stores: {
+    id: string;
+    name: string;
+    lat: number;
+    lng: number;
+  }[];
+}
+
 export default function StoreMap({ stores }: Props) {
   return (
     <MapContainer center={[44.65, -63.6]} zoom={7} style={{ height: "500px", width: "100%" }}>
