@@ -23,11 +23,28 @@ export default function Home() {
       </div>
       <div className="learn-about-fast-fashion">
         <h1>What do you know about fast fashion?</h1>
-        <Link href="/fashion"><p>Learn More</p></Link>
+        <div className="fast-fashion-text-box">
+          <p>
+            An article published in 2020 by Niinimäki, K., Peters, G., Dahlbo, H. et al. states numerous
+            dangers of the mass and rushed production of clothes, but highlights these:
+          </p>
+          <ul>
+            <li>Extensive fabric waste disposed of in developing countries</li>
+            <li>Exposure to harmful chemicals at all stages of the supply chain</li>
+            <li>Enviromental impact on our water and energy</li>
+          </ul>
+          <p>
+            Niinimäki, K., Peters, G., Dahlbo, H. et al. The environmental price of fast fashion. Nat Rev Earth Environ 1,
+             189–200 (2020). <Link href="https://doi.org/10.1038/s43017-020-0039-9"></Link>
+          </p>
+        </div>
+        <Link href="/fashion"><p>Learn More Here</p></Link>
       </div>
       <div className="submit-your-location">
         <h1>Don't see a thrift store on our map?</h1>
-        <Link href="/submit"><p>Submit Here</p></Link>
+        <div>
+          <Link href="/submit"><p>Submit A Store</p></Link>
+        </div>
       </div>
     </main>
   );

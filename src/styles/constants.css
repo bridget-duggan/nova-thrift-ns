@@ -1,0 +1,41 @@
+:root {
+    --brown: #7A6951;
+    --blue: #126091;
+    --green: #8CC6B2;
+    --red: #DA5E5F;
+    --beige: #E9DCC4;
+
+    --primary: #2A8C82;          
+    --primaryLight: #7FD1C8;    
+    --primaryDark: #1E6A63;     
+
+    --accent: #FF6F61;        
+    --accentLight: #FF9E94; 
+    --accentDark: #CC564D;     
+
+    --background: #F8F5F1;    
+    --surface: #FFFFFF;      
+    --border: #E1DAD2;          
+
+    --dark: #1F1F1F;
+    --medium: #4F4F4F;
+    --light: #8F8F8F;
+
+    --success: #3F8F57;
+    --error: #D64550;
+    --info: #3C91E6;
+
+    --heading: 'Poppins', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'Fira Code', monospace;
+
+    --xsFont: 4px;
+    --smFont: 8px;
+    --mdFont: 16px;
+    --lgFont: 24px;
+    --xlFont: 32px;
+
+    --fastTrans: 150ms ease;
+    --normalTrans: 250ms ease;
+    --slowTrans: 350ms ease
+}

@@ -2,6 +2,14 @@ body {
     margin: 0;
 }
 
+h1, h2, h3, h4 {
+    font-family: var(--heading);
+}
+
+p, li {
+    font-family: var(--body);
+}
+
 .logo {
     border-radius: 50%;
     height: 200px;
@@ -11,19 +19,29 @@ body {
 .header {
     background-image: linear-gradient(to left, #E1DAD2, #E9DCC4);
     display: flex;
-    height: 200px;
+    min-height: 200px;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 30px;
     padding-left: 80px;
-    gap: 70px;
+    gap: 100px;
+}
+
+.header-text-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
 
 .header h1 {
     font-size: 70px;
     color: #7A6951;
     padding: 5px 5px;
-    border-bottom: 2px solid white;
-    margin: 20px;
+    border-right: 2px solid white;
+    padding-right: 30px;
+    margin: 0px;
     text-align: center;
 }
 
